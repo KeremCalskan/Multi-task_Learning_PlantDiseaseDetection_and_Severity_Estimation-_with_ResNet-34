@@ -1,0 +1,6 @@
+The primary goal of this project is to develop an integrated deep learning model capable of automatically detecting diseased tissues on plant leaves and performing both pixel-level segmentation (optional) and overall disease severity estimation. 
+Traditional manual assessment methods are time-consuming and prone to subjective errors; however, deep neural networks can quickly and consistently deliver accurate results by learning from large-scale image data. In this project, 
+a pre-trained ResNet-34 model on ImageNet is employed as an "encoder" to extract high-level features from the leaf images. Subsequently, a U-Net-based "decoder" upsamples these features back to the original image dimensions, 
+enabling precise pixel-level segmentation of diseased regions. Simultaneously, the same encoder output is used—via global average pooling and fully connected layers—to estimate the overall disease severity as a continuous regression value. 
+This multi-task learning approach allows the spatial details learned during segmentation to enhance the accuracy of regression estimates, while the contextual information captured by regression also informs the segmentation performance. 
+Consequently, this approach aims to provide a rapid, reliable, and objective disease diagnosis and severity estimation system for practical use in agricultural production processes.
